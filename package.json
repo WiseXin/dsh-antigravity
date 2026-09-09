@@ -55,11 +55,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LiZhenNet/dsh-antigravity.git"
+    "url": "git+https://github.com/WiseXin/dsh-antigravity.git"
   },
-  "homepage": "https://github.com/LiZhenNet/dsh-antigravity#readme",
+  "homepage": "https://github.com/WiseXin/dsh-antigravity#readme",
   "bugs": {
-    "url": "https://github.com/LiZhenNet/dsh-antigravity/issues"
+    "url": "https://github.com/WiseXin/dsh-antigravity/issues"
   },
   "peerDependencies": {
     "@deepseek-ai/dsh-home-paths": "*",

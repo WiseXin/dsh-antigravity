@@ -48,6 +48,17 @@ SyntaxError: The requested module '@deepseek-ai/dsh-llm' does not provide an exp
 
 ## 使用方式
 
+### 在 dsh 市场中搜索 / 安装
+
+本仓库已在 GitHub 上公开并添加 `dsh-plugin` 等 topic，可被 DSH 的社区插件市场（如 `dsh-marketplace`，基于 GitHub `topic:dsh-plugin` 动态发现）收录。市场收录有最长约 10 分钟的目录缓存，之后在 **设置 → 插件 → Marketplace** 中搜索 **Antigravity** 即可找到。
+
+也可以直接用命令行安装到指定 profile：
+
+```sh
+dsh plugin --profile desktop add github:WiseXin/dsh-antigravity
+dsh plugin --profile web add github:WiseXin/dsh-antigravity
+```
+
 ### DSH Desktop（以 profile 依赖方式安装）
 
 在 `~/.dsh/profiles/desktop/package.json` 中将依赖指向本仓库：
