@@ -19,14 +19,14 @@
 ### 方式一：直接从 GitHub 安装
 
 ```sh
-dsh plugin --profile web add github:LiZhenNet/dsh-antigravity
+dsh plugin --profile web add github:WiseXin/dsh-antigravity
 ```
 
 ### 方式二：通过本地 Release 包安装
 
 ```sh
 npm run pack:dist
-dsh plugin --profile web add ./dist/dsh-antigravity-0.0.4.tgz
+dsh plugin --profile web add ./dist/wisexin-dsh-antigravity-0.1.0.tgz
 ```
 
 该 package 声明了 DSH bundle patch，安装后会自动挂载 host 插件与浏览器设置页面。
@@ -34,7 +34,8 @@ dsh plugin --profile web add ./dist/dsh-antigravity-0.0.4.tgz
 如果您的 DSH 版本暂不支持 `dsh plugin add`，可手动复制到 Web profile：
 
 ```sh
-cp -R dsh-antigravity "$DSH_HOME/profiles/web/node_modules/"
+mkdir -p "$DSH_HOME/profiles/web/node_modules/@wisexin"
+cp -R dsh-antigravity "$DSH_HOME/profiles/web/node_modules/@wisexin/dsh-antigravity"
 ```
 
 然后在 profile 的 `cordis.patch.yml` 中添加该插件：
@@ -42,7 +43,7 @@ cp -R dsh-antigravity "$DSH_HOME/profiles/web/node_modules/"
 ```yaml
 - insert:
     - id: llm-antigravity
-      name: dsh-antigravity
+      name: "@wisexin/dsh-antigravity"
 ```
 
 重启 DSH：
@@ -71,7 +72,7 @@ dsh web
 插件会在本地启动一个 loopback OAuth 回调服务（`http://localhost:51121/oauth-callback`）。如果 Web 服务无法自动唤起浏览器，可在同机器终端运行命令行登录助手：
 
 ```sh
-node "$DSH_HOME/profiles/web/node_modules/dsh-antigravity/bin/antigravity-login.mjs"
+node "$DSH_HOME/profiles/web/node_modules/@wisexin/dsh-antigravity/bin/antigravity-login.mjs"
 ```
 
 凭证存储路径：

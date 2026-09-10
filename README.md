@@ -65,7 +65,7 @@ dsh plugin --profile web add github:WiseXin/dsh-antigravity
 
 ```json
 "dependencies": {
-  "dsh-antigravity": "github:WiseXin/dsh-antigravity"
+  "@wisexin/dsh-antigravity": "github:WiseXin/dsh-antigravity"
 }
 ```
 
@@ -76,7 +76,7 @@ dsh plugin --profile web add github:WiseXin/dsh-antigravity
 将 `lib/`、`bin/`、`assets/`、`cordis.patch.yml`、`package.json` 等复制到：
 
 ```text
-~/.dsh/profiles/desktop/node_modules/dsh-antigravity/
+~/.dsh/profiles/desktop/node_modules/@wisexin/dsh-antigravity/
 ```
 
 完全退出（含托盘）并重启 DSH Desktop。
